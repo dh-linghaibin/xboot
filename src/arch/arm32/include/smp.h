@@ -15,15 +15,16 @@ static inline int smp_processor_id(void)
 #else
 static inline int smp_processor_id(void)
 {
-	int tmp;
+	// int tmp;
 
-	__asm__ __volatile__(
-		"mrc p15, 0, %0, c0, c0, 5\n"
-		"and %0, %0, #0xf\n"
-		: "=r" (tmp)
-		:
-		: "memory");
-	return tmp;
+	// __asm__ __volatile__(
+	// 	"mrc p15, 0, %0, c0, c0, 5\n"
+	// 	"and %0, %0, #0xf\n"
+	// 	: "=r" (tmp)
+	// 	:
+	// 	: "memory");
+	// return tmp;
+	return 0;
 }
 #endif
 
